@@ -1,6 +1,7 @@
 :root {
     --primary-text-color: #212121;
     --title-text-collor: #757575;
+    --title-hero-color: #2F303A;
     --primary-white-color: #FFFFFF;
     --akcent-color: #2196F3;
 }
@@ -65,7 +66,7 @@ body {
 
 .hero-title {
     color: var(--primary-white-color);
-    background-color: #2F303A;
+    background-color: var(--title-hero-color);
 
     font-weight: 900;
     font-size: 44px;
@@ -80,6 +81,19 @@ body {
 .section-title {
     color: var(--primary-text-color);
 }
+
+.visually-hidden {
+    position: absolute;
+     white-space: nowrap;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+     border: 0;
+     padding: 0;
+     clip: rect(0 0 0 0);
+     clip-path: inset(50%);
+     margin: -1px;
+   }
 
 /* Features */
 
@@ -133,8 +147,50 @@ body {
     height: 50px;
 }
 
+/* Works */
+
+.works .title {
+    color: var(--primary-text-color);
+    
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.works .text {
+    color: var(--title-text-collor);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1,88;
+    letter-spacing: 0.03em;
+}
+
 /* Footer */
 
 .logo .accent {
     color: var(--akcent-color);
+}
+
+.address .title {
+    color: var(--primary-white-color);
+    background-color: var(--title-hero-color);
+   
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.address .link {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: var(--title-hero-color);
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
 }
