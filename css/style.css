@@ -4,6 +4,9 @@
     --title-hero-color: #2F303A;
     --primary-white-color: #FFFFFF;
     --akcent-color: #2196F3;
+    --logo-color: #000000;
+    --section-color: #F5F4FA;
+    --adress-link-color: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -19,7 +22,7 @@ body {
 /* Logo */
 
 .logo {
-    color: #000000;
+    color: var(--logo-color);
     font-family: 'Raleway', sans-serif; 
 
     font-weight: 700;
@@ -27,10 +30,6 @@ body {
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
-}
-
-.logo:hover {
-    color: var(--akcent-color);
 }
 
 /* site nav */
@@ -50,23 +49,33 @@ body {
     color: var(--akcent-color);
 }
 
-.auth-nav {
-    font-weight: 500;
-
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+.site-nav .current {
+    color: var(--akcent-color);
 }
 
 .auth-nav .link {
+    color: var(--title-text-collor);
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
     text-decoration: none;
 }
 
+.auth-nav .link:hover,
+.auth-nav .link:focus {
+    color: var(--akcent-color);
+}  
+
+
 /* Hero */
 
+.hero {
+    background-color: var(--title-hero-color);
+}
 .hero-title {
     color: var(--primary-white-color);
-    background-color: var(--title-hero-color);
 
     font-weight: 900;
     font-size: 44px;
@@ -78,8 +87,20 @@ body {
 
 /* Section */ 
 
+.section-title,
+.work-list {
+    background-color: var(--section-color);
+}
+
 .section-title {
     color: var(--primary-text-color);
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
 .visually-hidden {
@@ -103,13 +124,13 @@ body {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.17;
+    text-transform: uppercase;
 }
 
 .feature-list .text {
     color: var(--title-text-collor);
 
     font-size: 14px;
-    font-weight: 400;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
@@ -129,11 +150,14 @@ body {
 .work-list .text {
     color: var(--title-text-collor);
 
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+}
+
+.work-list .item {
+    background-color: var(--primary-white-color);
 }
 
 /* Button */
@@ -143,8 +167,25 @@ body {
     background-color: var(--akcent-color);
 
     font-family: inherit;
-    width: 216px;
-    height: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+
+.list .button {
+    color: var(--primary-text-color);
+    background-color: var(--section-color);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
 /* Works */
@@ -161,23 +202,36 @@ body {
 .works .text {
     color: var(--title-text-collor);
 
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
 }
 
+.work-list .item {
+    background-color: var(--primary-white-color);
+}
+
 /* Footer */
+
+.footer {
+    background: var(--title-hero-color);
+}
+
+.footer .logo {
+    color: var(--primary-white-color);
+}
 
 .logo .accent {
     color: var(--akcent-color);
 }
 
+.address {
+    list-style: none;
+}
+
 .address .title {
     color: var(--primary-white-color);
-    background-color: var(--title-hero-color);
    
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -185,8 +239,7 @@ body {
 }
 
 .address .link {
-    color: rgba(255, 255, 255, 0.6);
-    background-color: var(--title-hero-color);
+    color: var(--adress-link-color); 
 
     font-weight: 400;
     font-size: 14px;
@@ -194,3 +247,8 @@ body {
     letter-spacing: 0.03em;
     text-decoration: none;
 }
+
+.address .link:hover,
+.address .link:focus {
+    color: var(--akcent-color);
+}  
