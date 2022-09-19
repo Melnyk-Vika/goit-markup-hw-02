@@ -31,6 +31,9 @@ body {
     letter-spacing: 0.03em;
     text-decoration: none;
 }
+.accent {
+    color: var(--akcent-color);
+}
 
 /* site nav */
 
@@ -87,13 +90,9 @@ body {
 
 /* Section */ 
 
-.section-title,
-.work-list {
-    background-color: var(--section-color);
-}
-
 .section-title {
     color: var(--primary-text-color);
+    background-color: var(--section-color);
     
     font-style: normal;
     font-weight: 700;
@@ -162,7 +161,8 @@ body {
 
 /* Button */
 
-.button {
+.button:hover,
+.button:focus {
     color: var(--primary-white-color);
     background-color: var(--akcent-color);
 
@@ -181,12 +181,20 @@ body {
     color: var(--primary-text-color);
     background-color: var(--section-color);
 
+    font-family: inherit;
+    cursor: pointer;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
 }
+
+.list .button:hover,
+.list .button:focus {
+    color: var(--primary-white-color);
+    background-color: var(--akcent-color);
+    }
 
 /* Works */
 
@@ -223,6 +231,10 @@ body {
 
 .logo .accent {
     color: var(--akcent-color);
+}
+
+.box {
+    font-style: normal;
 }
 
 .address {
